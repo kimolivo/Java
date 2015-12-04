@@ -1,0 +1,328 @@
+C:\Users\OJT>git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\OJT>mkdir Java
+
+C:\Users\OJT>dir
+ Volume in drive C is OS
+ Volume Serial Number is 96E7-6601
+
+ Directory of C:\Users\OJT
+
+12/04/2015  12:37 PM    <DIR>          .
+12/04/2015  12:37 PM    <DIR>          ..
+11/13/2015  03:40 PM               145 .appletviewer
+11/18/2015  05:33 PM    <DIR>          .config
+11/04/2015  03:18 PM    <DIR>          .eclipse
+11/19/2015  01:47 PM             2,581 .gitattributes
+12/03/2015  05:17 PM                78 .gitconfig
+11/04/2015  05:22 PM    <DIR>          .oracle_jre_usage
+11/04/2015  03:19 PM    <DIR>          .p2
+12/02/2015  03:22 PM    <DIR>          .ssh
+10/29/2015  02:00 AM    <DIR>          Contacts
+12/03/2015  08:30 PM    <DIR>          Desktop
+11/27/2015  01:42 PM    <DIR>          Documents
+12/04/2015  12:33 PM    <DIR>          Downloads
+11/04/2015  03:19 PM    <DIR>          eclipse
+12/03/2015  02:10 PM    <DIR>          Exist
+10/29/2015  02:00 AM    <DIR>          Favorites
+12/02/2015  03:41 PM    <DIR>          Git
+12/04/2015  12:37 PM    <DIR>          Java
+11/18/2015  08:04 PM    <DIR>          Kim
+11/18/2015  06:05 PM    <DIR>          KimHello
+11/18/2015  03:47 PM    <DIR>          kimyat
+11/18/2015  09:01 PM    <DIR>          Kyang
+10/29/2015  02:00 AM    <DIR>          Links
+11/20/2015  12:27 PM    <DIR>          Music
+11/19/2015  03:48 PM    <DIR>          new
+11/18/2015  03:36 PM    <DIR>          newrepo
+11/19/2015  05:18 PM    <DIR>          NewRepo2
+11/27/2015  09:12 PM    <DIR>          Pictures
+10/29/2015  02:00 AM    <DIR>          Saved Games
+10/29/2015  02:00 AM    <DIR>          Searches
+10/29/2015  04:10 PM    <DIR>          Tracing
+11/16/2015  03:05 PM    <DIR>          Videos
+11/25/2015  07:10 PM    <DIR>          VisualStudio
+11/19/2015  09:07 PM    <DIR>          VisualStudio2
+12/03/2015  05:52 AM    <DIR>          workspace
+               3 File(s)          2,804 bytes
+              33 Dir(s)  159,047,614,464 bytes free
+
+C:\Users\OJT>cd Java
+
+C:\Users\OJT\Java>echo #CodingIsCool >> README.md
+
+C:\Users\OJT\Java>git init
+Initialized empty Git repository in C:/Users/OJT/Java/.git/
+
+C:\Users\OJT\Java>git config --global user.name "Kim Olivo"
+
+C:\Users\OJT\Java>git config --global user.email kimolivo@yahoo.com
+
+C:\Users\OJT\Java>git init
+Reinitialized existing Git repository in C:/Users/OJT/Java/.git/
+
+C:\Users\OJT\Java>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\OJT\Java>git add README.md
+
+C:\Users\OJT\Java>git commit -m "Amazing"
+[master (root-commit) 72c2fc5] Amazing
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\Users\OJT\Java>git status
+On branch master
+nothing to commit, working directory clean
+
+C:\Users\OJT\Java>git remote add origin https://github.com/kimolivo/Java.git
+
+C:\Users\OJT\Java>git push -u origin master
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 227 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/kimolivo/Java.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\Users\OJT\Java>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+C:\Users\OJT\Java>echo #EULA >> LICENSE.MD
+
+C:\Users\OJT\Java>git init
+Reinitialized existing Git repository in C:/Users/OJT/Java/.git/
+
+C:\Users\OJT\Java>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        LICENSE.MD
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\OJT\Java>git add LICENSE.MD
+
+C:\Users\OJT\Java>git commit -m "EULA"
+[master 4e9adaf] EULA
+ 1 file changed, 1 insertion(+)
+ create mode 100644 LICENSE.MD
+
+C:\Users\OJT\Java>git push -u origin master
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/kimolivo/Java.git/'
+
+C:\Users\OJT\Java>git push -u origin master
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+To https://github.com/kimolivo/Java.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kimolivo/Java.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\OJT\Java>git config --global user.name "Kim Olivo"
+
+C:\Users\OJT\Java>git config --global user.email kimolivo@yahoo.com
+
+C:\Users\OJT\Java>git push -u origin master
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+To https://github.com/kimolivo/Java.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kimolivo/Java.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\OJT\Java>git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/kimolivo/Java
+   72c2fc5..1857f48  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ LICENSE.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 LICENSE.md
+
+C:\Users\OJT\Java>git -h
+Unknown option: -h
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+C:\Users\OJT\Java>git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\OJT\Java>git remote -v
+origin  https://github.com/kimolivo/Java.git (fetch)
+origin  https://github.com/kimolivo/Java.git (push)
+
+C:\Users\OJT\Java>git fetch []
+
+C:\Users\OJT\Java>
+
+C:\Users\OJT\Java>git fetch [https://github.com/kimolivo/Java.git]
+fatal: I don't handle protocol '[https'
+
+C:\Users\OJT\Java>git fetch [github.com/kimolivo/Java.git]
+fatal: ']' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\OJT\Java>git fetch https://github.com/kimolivo/Java.git
+From https://github.com/kimolivo/Java
+ * branch            HEAD       -> FETCH_HEAD
+
+C:\Users\OJT\Java>git fetch origin
+
+C:\Users\OJT\Java>git pull
+Already up-to-date.
+
+C:\Users\OJT\Java>git push https://github.com/kimolivo/Java.git
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.c@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/kimolivo/Java.git/'
+
+C:\Users\OJT\Java>git push https://github.com/kimolivo/Java.git
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 604 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/kimolivo/Java.git
+   1857f48..b75d610  master -> master
+
+C:\Users\OJT\Java>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   LICENSE.MD
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        GitCommand.docx
+        ~$tCommand.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\OJT\Java>
