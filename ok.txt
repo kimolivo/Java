@@ -1,0 +1,26 @@
+C:\Users\OJT\Java>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   LICENSE.MD
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\OJT\Java>
+C:\Users\OJT\Java>git init
+Reinitialized existing Git repository in C:/Users/OJT/Java/.git/
+
+C:\Users\OJT\Java>git push -u origin master
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+
+C:\Users\OJT\Java>git push -u origin
+Username for 'https://github.com': kimolivo@yahoo.com
+Password for 'https://kimolivo@yahoo.com@github.com':
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
